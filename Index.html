@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+           
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box;
+        }
+        .hero{
+            width: 100%;
+            height: 100vh;
+            background-image:url(./photos/Tree.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 90%;
+            max-width: 600px;
+        }
+        .input-group{
+            margin-bottom: 30px;
+            position: relative;
+        }
+        input,textarea{
+            background: transparent;
+            font-size: 15px;
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            color:#fff
+            
+
+        }
+        label{
+            height: 100%;
+            position: absolute;
+            left:0;
+            top: 0;
+            padding: 10px;
+            color: #fff;
+            cursor: text;
+            transition: 0.2s;
+        }
+        button{
+            padding: 10px 0;
+            color: #fff;
+            outline: none;
+            background: transparent;
+            border: 1px solid #fff;
+            width: 100%;
+            cursor: pointer;
+        }
+        input:focus~label,
+        input:valid~label,
+        textarea:focus~label,
+        textarea:valid~label{
+            top: -35px;
+            font-size: 14px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .row .input-group{
+            flex-basis: 48%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="hero">
+        <form >
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name"><i class="fas fa-user"></i> First Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name"><i class="fas fa-user"></i> Last Name</label>
+                </div>
+                
+            </div>
+            <div class="input-group">
+                <input type="text" name="number" id="number" required>
+                <label for="number"><i class="fas fa-phone-square-alt"></i> Phone Number</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="email" name="email" id="email" required>
+                <label for="email"><i class="fas fa-envelope" ></i> Email Address</label>
+            </div>
+            <div class="input-group">
+                <textarea name="message" id="message" rows="8"></textarea>
+                <label for="message" ><i class="fas fa-comments"></i>Your Message</label>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i> SUBMIT</button>
+        </form>
+
+    </div>
+</body>
+</html>
